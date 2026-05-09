@@ -1,0 +1,30 @@
+{
+  "name": "telog",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Telog will send logs directly into your telegram",
+  "keywords": [
+    "telog",
+    "telegram",
+    "log",
+    "loggin",
+    "loggin"
+  ],
+  "homepage": "https://github.com/kayumovmuhammad/telog#readme",
+  "bugs": {
+    "url": "https://github.com/kayumovmuhammad/telog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kayumovmuhammad/telog.git"
+  },
+  "license": "ISC",
+  "author": "Kayumov Muhammad",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
