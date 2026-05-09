@@ -1,4 +1,5 @@
-import "dotenv/config";
+import { getConfig } from "./config.js";
+import initBot from "./initBot.js";
 
 function sendMessage(message, botToken, chatId) {
   const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${message}`;
@@ -23,13 +24,19 @@ function sendMessage(message, botToken, chatId) {
     });
 }
 
-export default function telog(message) {
-  const botToken = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_CHAT_ID;
+function telog(message) {
+  const { botToken, chatId } = getConfig();
 
   if (!botToken || !chatId) {
-    console.error("Environment variables TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID are not defined.");
+    throw new Error("Environment variables TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID are not defined.");
   }
 
   sendMessage(message, botToken, chatId);
 }
+
+const bot = {
+  init: initBot,
+  log: telog,
+};
+
+export default bot;

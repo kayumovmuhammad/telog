@@ -1,6 +1,6 @@
 {
-  "name": "telog",
-  "version": "1.0.0",
+  "name": "telegram-logger-simple",
+  "version": "1.0.2",
   "type": "module",
   "description": "Telog will send logs directly into your telegram",
   "keywords": [
@@ -23,8 +23,5 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "dotenv": "^17.4.2"
   }
 }
